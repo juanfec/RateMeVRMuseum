@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/home_fragment">
+    <fragment
+        android:id="@+id/home_fragment"
+        android:name="co.com.incubapp.ui.home.Home"
+        android:label="home_fragment"
+        tools:layout="@layout/home_fragment" />
+    <fragment
+        android:id="@+id/profile_fragment"
+        android:name="co.com.incubapp.ui.profile.Profile"
+        android:label="profile_fragment"
+        tools:layout="@layout/profile_fragment" />
+    <fragment
+        android:id="@+id/ranking_fragment"
+        android:name="co.com.incubapp.ui.ranking.Ranking"
+        android:label="ranking_fragment"
+        tools:layout="@layout/ranking_fragment" />
+</navigation>
