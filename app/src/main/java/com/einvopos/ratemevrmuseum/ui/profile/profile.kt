@@ -9,11 +9,10 @@ import android.view.ViewGroup
 
 import com.einvopos.ratemevrmuseum.R
 
-class profile : Fragment() {
-
-    companion object {
-        fun newInstance() = profile()
-    }
+/**
+ * profile fragment for further implementation
+ */
+class Profile : Fragment() {
 
     private lateinit var viewModel: ProfileViewModel
 

@@ -4,13 +4,14 @@ import android.accounts.AuthenticatorDescription
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "user")
+@Entity(tableName = "exhibit")
 data class Exhibit(
     var name: String,
     var year: Int,
-    var description: String
+    var description: String,
+    var imgUrl: String
 ){
     @PrimaryKey(autoGenerate = true)
     var id: Long? = null
-    constructor() : this("", 0, "")
+    constructor() : this("", 0, "","")
 }

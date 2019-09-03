@@ -38,7 +38,6 @@ abstract class AppDatabase : RoomDatabase() {
                 AppDatabase::class.java,
                 "MyDatabase.db"
             ).build()
-
     }
 
     abstract fun getUserDao(): UserDao

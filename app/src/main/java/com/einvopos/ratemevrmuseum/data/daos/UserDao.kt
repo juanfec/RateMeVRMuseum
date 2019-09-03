@@ -13,9 +13,6 @@ interface UserDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertOrUpdate(user: List<User>)
 
-    @Query("SELECT * FROM User WHERE id = :userId")
-    fun findById(userId : String): LiveData<User>
-
-    @Query("SELECT * FROM User")
-    fun getItems(): LiveData<MutableList<User>>
+    @Query("SELECT * FROM user")
+    fun getUsers(): LiveData<MutableList<User>>
 }
