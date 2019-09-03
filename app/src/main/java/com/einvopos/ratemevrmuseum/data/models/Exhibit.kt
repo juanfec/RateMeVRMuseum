@@ -12,6 +12,6 @@ data class Exhibit(
     var imgUrl: String
 ){
     @PrimaryKey(autoGenerate = true)
-    var id: Long? = null
+    var id: Long = 0
     constructor() : this("", 0, "","")
 }

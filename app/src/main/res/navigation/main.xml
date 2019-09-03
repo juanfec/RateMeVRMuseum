@@ -5,7 +5,13 @@
     android:id="@+id/main"
             app:startDestination="@id/home">
     <fragment android:id="@+id/home" android:name="com.einvopos.ratemevrmuseum.ui.home.Home"
-              android:label="home_fragment" tools:layout="@layout/home_fragment"/>
+              android:label="home_fragment" tools:layout="@layout/home_fragment">
+        <action android:id="@+id/action_home_to_exhibit" app:destination="@id/exhibit"/>
+    </fragment>
     <fragment android:id="@+id/profile" android:name="com.einvopos.ratemevrmuseum.ui.profile.Profile"
               android:label="profile_fragment" tools:layout="@layout/profile_fragment"/>
+    <fragment android:id="@+id/exhibit" android:name="com.einvopos.ratemevrmuseum.ui.exhibit.Exhibit"
+              android:label="exhibit_fragment" tools:layout="@layout/exhibit_fragment">
+        <argument android:name="id" app:argType="long" android:defaultValue="0L"/>
+    </fragment>
 </navigation>

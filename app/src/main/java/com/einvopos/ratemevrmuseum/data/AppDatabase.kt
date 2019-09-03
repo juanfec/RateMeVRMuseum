@@ -6,6 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import com.einvopos.ratemevrmuseum.data.daos.ExhibitDao
+import com.einvopos.ratemevrmuseum.data.daos.RateDao
 import com.einvopos.ratemevrmuseum.data.daos.UserDao
 import com.einvopos.ratemevrmuseum.data.models.Exhibit
 import com.einvopos.ratemevrmuseum.data.models.Rate
@@ -43,5 +44,7 @@ abstract class AppDatabase : RoomDatabase() {
     abstract fun getUserDao(): UserDao
 
     abstract fun getExhibitDao() : ExhibitDao
+
+    abstract fun getRateDao() : RateDao
 
 }

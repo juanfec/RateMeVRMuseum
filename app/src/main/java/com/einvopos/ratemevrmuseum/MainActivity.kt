@@ -22,7 +22,7 @@ import org.kodein.di.generic.instance
 class MainActivity : AppCompatActivity(),KodeinAware {
 
     override val kodein by kodein()
-    private val database: AppDatabase by instance()
+
 
     private lateinit var navController: NavController
     private lateinit var bottomNavigationView: BottomNavigationView
@@ -34,19 +34,9 @@ class MainActivity : AppCompatActivity(),KodeinAware {
         bottomNavigationView = findViewById(R.id.bottomNavigationView)
         NavigationUI.setupWithNavController(bottomNavigationView, navController)
         NavigationUI.setupActionBarWithNavController(this, navController)
-        initializingData()
     }
 
-    //thread to insert data usually this goes in the database creation but im short on time
-    fun initializingData(){
-        Coroutines.io {
-            val exhibit1 = Exhibit("Lion",1668,"description of a lion","https://drive.google.com/open?id=1CZewTBwAGvWeBAKuhB8PITWIVULA4m0w")
-            val exhibit2 = Exhibit("Bust",0,"description of a Bust","https://drive.google.com/open?id=1k6FHs8oPRYJ1S_KvVQoz2DcJqFTcdEYo")
-            val exhibit3 = Exhibit("Bust",2000,"description of a Bust","https://drive.google.com/open?id=1hhQBZcB_i6Epo6X98eOhfJGkxLWlWJbO")
-            val list = listOf(exhibit1,exhibit2,exhibit3)
-            database.getExhibitDao().insertOrUpdate(list)
-        }
-    }
+
 
 
     override fun onSupportNavigateUp(): Boolean {
